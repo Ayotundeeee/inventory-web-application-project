@@ -173,6 +173,11 @@ i {
     margin-top: 80px;
 }
 
+i:active{
+    transform: scale(0.95);
+    transition: 0s;
+}
+
 .bookstore > :nth-child(3){
     background-color: black;
     margin-left: 50px;
