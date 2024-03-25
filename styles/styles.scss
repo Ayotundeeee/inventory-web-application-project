@@ -1,0 +1,189 @@
+body{
+    // background-color: rgb(249, 219, 184);
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.bookstore{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 200px 1fr 1px 1fr;
+    // grid-template-rows: 40px 5fr 40px;
+    // grid-template-areas: 
+    // "title books form ";
+    border: 1px solid green($color: #000000);
+
+    &__title{
+        // align-items: center;
+        // justify-content: center;
+        // grid-area: title;
+        background-color: rgb(177, 201, 215);
+        text-align: center;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        padding: 90px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        // margin-right: 30px;
+
+        .title{
+            font-style: oblique;
+            font-size: 70px;
+            font-weight: 800;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+    }
+
+    &__books{
+        // grid-area: books;
+        background-color: rgb(215, 215, 236);
+    }
+    &__form{
+        display: flex;
+        // grid-area: form;
+        // background-color: orange;
+        align-items: center;
+        justify-content: center;
+
+        .book-info{
+            gap: 50px;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+
+
+            input{
+                padding: 5px;
+                outline: 0;
+                border: none;
+                // display: block;
+                border-bottom: 3px solid rgb(6, 6, 81);
+                width: 275px;
+
+                &::placeholder{
+                    font-size: 20px;
+                    font-weight: 1px;
+                    opacity: 0.5;
+                }
+            }
+
+            &__status{
+                border: none;
+                outline: 0;
+                border-bottom: 3px solid rgb(6, 6, 81);
+                font-size: 20px;
+                font-weight: 70px;
+                padding: 5px;
+            }
+
+            &__submit-btn{
+                padding: 15px;
+                margin: auto;
+                width: 250px;
+                border: none;
+                color: white;
+                background-color: rgb(6, 6, 81);
+                border-radius: 25px;
+                cursor: pointer;
+                transition: 0.1s;
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+                &:active {
+                    transform: scale(0.97);
+                    
+                    transition: 0.2s;
+                  }
+            }
+        }
+        
+    }
+}
+
+.bookstore__books__book-list {
+    max-height: 750px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.book {
+    border-bottom: 1px solid black;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    // justify-content: space-between;
+    margin: 10px;
+    padding: 10px 5px 20px 0px;
+}
+
+img{
+    width: 100px;
+}
+
+.book-details {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    gap: 5px;
+    padding: 10px;
+
+    &__title {
+        font-size: 30px;
+        font-weight: 800;
+        margin-bottom: 5px;
+    }
+
+    &__author {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    &__price {
+        font-size: 30px;
+        font-weight: bolder;
+        margin-top: 5px;
+    }
+}
+
+.in-stock {
+    color: white;
+        background-color: green;
+        font-size: 10px;
+        text-align: center;
+        padding: 4px 15px 4px 15px;
+        width: fit-content;
+        border-radius: 25px;
+}
+
+.out-of-stock {
+    color: white;
+        background-color: red;
+        font-size: 10px;
+        text-align: center;
+        padding: 4px 15px 4px 15px;
+        width: fit-content;
+        border-radius: 25px;
+}
+
+i {
+    margin-right:50px;
+    margin-top: 80px;
+}
+
+.bookstore > :nth-child(3){
+    background-color: black;
+    margin-left: 50px;
+    align-self: center;
+    height: 430px;
+    padding: 1px;
+}
+// .vertical-line{
+//     background-color: black;
+//     
+//     padding: 1px;
+//     height: 430px;
+//     margin-top: 180px;
+// }

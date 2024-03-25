@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://kit.fontawesome.com/5fe7a8e9e8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="bookstore">
+
+        <aside class="bookstore__title">
+            <div class="title">Booktory</div>
+        </aside>
+
+        <div class="bookstore__books" id="books">
+            <ul class="bookstore__books__book-list">
+            
+            </ul>
+        </div>
+
+        <div class="vertical-line"></div>
+       
+        <div class="bookstore__form">
+        
+            <form class="book-info">
+                <input type="text" class="book-info__title" placeholder="Title" id="title" required>
+                <input type="text" class="book-info__author" placeholder="Author" id="author" required>
+                <input type="text" class="book-info__image-url" placeholder="Image URL" id="image">
+                <input type="text" class="book-info__price" placeholder="Price" id="price">
+                <select name="status" id="status" class="book-info__status" id="status">
+                    <option value="in-stock">In Stock</option>
+                    <option value="out-of-stock">Out of Stock</option>
+                </select>
+                <button type="submit" class="book-info__submit-btn" id="add-book" value="Add Book">Add Book</button>
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
